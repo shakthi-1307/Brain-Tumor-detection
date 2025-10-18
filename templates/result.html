@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background: linear-gradient(135deg, #53555aff, #2a5298);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .result-box {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            padding: 40px 60px;
+            border-radius: 18px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            color: white;
+            width: 380px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 26px;
+            letter-spacing: 1px;
+        }
+
+        img {
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+        }
+
+        p {
+            font-size: 18px;
+            margin: 8px 0;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background: #ff9800;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.3s ease;
+            font-size: 16px;
+        }
+
+        a:hover {
+            background: #e68900;
+            transform: scale(1.06);
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h2>Prediction Result</h2>
+        <img src="data:image/jpeg;base64,{{ img_data }}" alt="Uploaded Image" width="260">
+        <p><b>Prediction:</b> {{ prediction }}</p>
+        <p><b>Confidence:</b> {{ confidence }}%</p>
+        <a href="/">← Go Back</a>
+    </div>
+</body>
+</html>
